@@ -1,4 +1,6 @@
+import ru.smak.polynoms.Lagrange;
 import ru.smak.polynoms.Polynom;
+import ru.smak.polynoms.PolynomException;
 
 public class Main {
 	public static void main(String[] args) {
@@ -24,5 +26,15 @@ public class Main {
 		System.out.println(pm2);
 		System.out.println(pm3);
 		System.out.println(pm3.getValue(2.0));
+		System.out.println("Полиномы Лагранжа:");
+		double[] x = {-1, 0, 1, 2};
+		double[] y = {0, 1, 2, 9};
+		try {
+			Lagrange l = new Lagrange(x, y);
+			System.out.println(l);
+		} catch (PolynomException e) {
+			System.out.println(e);
+		}
+
 	}
 }

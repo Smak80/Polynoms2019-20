@@ -5,7 +5,7 @@ import java.util.Collections;
 
 public class Polynom {
 	//Набор коэффициентов полинома
-	private ArrayList<Double> c;
+	protected ArrayList<Double> c;
 
 	public Polynom(){
 		c  = new ArrayList<>();
